@@ -1,0 +1,15 @@
+<div>
+    <input type="text" class="from-control" placeholder="search" (keyup)= onfilterdata($event)>
+    <br>
+    <br>
+    <table align="center" class="table-striped table-borderless" >
+        <th class="trtable" > Id </th>
+        <th class="trtable"> <span (click)="sortByEmployeeName($event)" style="text-decoration-line: underline;" >Employee Name</span></th>
+        <th class="trtable">Employee Salary</th>
+      <tr *ngFor="let emp of employeeDetails" >
+        <td class="tdtable">{{emp.id}}</td>
+        <td class="tdtable">{{emp.employee_name}}</td>
+        <td class="tdtable">{{emp.employee_salary}}</td>
+    </tr>
+    </table>
+</div>
